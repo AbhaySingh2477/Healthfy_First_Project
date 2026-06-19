@@ -9,7 +9,10 @@
 body {
     line-height: 1.6;
     background-image: url('imageof.webp');
+    background-color: rgb(46, 44, 44);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header {
@@ -22,12 +25,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -57,19 +62,6 @@ nav ul li a {
 .hero-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
-}
-
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    line-height: 1.6;
-    background-color:rgb(46, 44, 44);
 }
 
 /* Exercise Gallery Section */
@@ -110,6 +102,7 @@ body {
 .exercise-block h3 {
     font-size: 1.2rem;
     margin-top: 0.5rem;
+    color: #333;
 }
 
 .exercise-block p {
@@ -119,11 +112,25 @@ body {
 }
 
 .exercise-block:hover {
-  transform: scale(1.2);
-  
-
+    transform: scale(1.05);
 }
 
-.Push-Up{
-  background-image: url('https://tenor.com/view/pushup-gif-18714135');
+.Push-Up {
+    background-image: url('https://tenor.com/view/pushup-gif-18714135');
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 }
